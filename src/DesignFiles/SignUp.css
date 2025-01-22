@@ -1,0 +1,113 @@
+/* Container for the whole page */
+.signUpContainer {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    background-color: #f9f9ff;
+  }
+  
+  /* Left Column: Image Section */
+  .imageSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  .imageSection img {
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: contain;
+  }
+  
+  /* Right Column: Form Section */
+  .formSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f3f4f6;
+  }
+  
+  /* Signup Form */
+  .signUpForm {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .signUpForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333333;
+  }
+  
+  /* Input Fields */
+  .signUpForm input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .signUpForm input:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #f9f9ff;
+  }
+  
+  /* Signup Button */
+  .signUpButton button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .signUpButton button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Sign-In Section */
+  .SignInDiv {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .SignInDiv label {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #555555;
+  }
+  
+  .SignInDiv button {
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .SignInDiv button:hover {
+    background-color: #e0e0e0;
+    color: #0056b3;
+  }
+  
