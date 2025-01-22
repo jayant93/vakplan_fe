@@ -1,38 +1,327 @@
-.App {
-  text-align: center;
+/* General Page Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9ff; /* Light whitish background */
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Styling */
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #ffffff, #f0f8ff); /* Light gradient */
+  padding: 15px 30px;
+  color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Logo Section */
+.logoSection h1 {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin: 0;
+  color: #007bff;
 }
 
-.App-header {
-  background-color: #282c34;
+.logoSection p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Navigation Section */
+.navSection {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.navSection button {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navSection button:hover {
+  background-color: #0056b3;
+}
+
+/* Specific Styles for Buttons */
+.findVacationBtn {
+  background-color: #00bfff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.findVacationBtn:hover {
+  background-color: #007bff;
+}
+
+.signUpBtn, .signInBtn {
+  background-color: #0056b3;
+  font-size: 16px;
+}
+
+.signInBtn:hover {
+  background-color: #00408b;
+}
+
+.signUpBtn:hover {
+  background-color: #003366;
+}
+
+/* Modal Background */
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modalContent {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px; /* Increased width for larger form */
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Modal Close Button */
+.closeModalBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.closeModalBtn:hover {
+  background-color: #e60000;
+}
+
+/* General Sign Up Form Styling */
+.signUpContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  background-color: #f9f9ff;
+  padding: 20px;
+  flex-direction: row;
+}
+
+.imageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.formSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px; /* Increased width for larger form */
+  margin-top: 20px;
+}
+
+.signUpForm {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Ensure the form does not stretch too wide */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.signUpForm h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.signUpForm input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 30px; /* Rounded corners */
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.signUpForm input:focus {
+  border-color: #00aaff;
+  outline: none;
+  background-color: #f0f8ff;
+}
+
+.signUpButton button {
+  width: 100%;
+  padding: 14px;
+  background-color: #00aaff;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px; /* Rounded corners */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signUpButton button:hover {
+  background-color: #007bb5;
+}
+
+/* Sign-In Section */
+.SignInDiv {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.SignInDiv label {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.SignInDiv button {
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  color: #00aaff;
+  border: 1px solid #00aaff;
+  border-radius: 30px; /* Rounded corners */
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.SignInDiv button:hover {
+  background-color: #e0e0e0;
+  color: #007bb5;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .headerContainer {
+    padding: 10px 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logoSection h1 {
+    font-size: 28px;
   }
+
+  .navSection {
+    gap: 10px;
+  }
+
+  .signUpContainer {
+    padding: 10px;
+  }
+
+  .signUpForm {
+    max-width: 350px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navSection {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .imageSection {
+    display: none; /* Hide image on mobile */
+  }
+
+  .signUpContainer {
+    flex-direction: column;
+  }
+
+  .signUpForm {
+    padding: 20px;
+    max-width: 90%; /* Ensure the form takes up more space */
+  }
+}
+/* Footer Styling */
+.footer {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 30px;
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.developerInfo {
+  font-size: 16px;
+  color: #555;
+}
+
+.developerInfo strong {
+  font-weight: bold;
+}
+
+.developerInfo em {
+  color: #007bff;
+}
+/* Styling for the developer's portfolio link */
+.LinkedInLink {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.LinkedInLink:hover {
+  text-decoration: underline;
 }

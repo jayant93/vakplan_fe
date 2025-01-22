@@ -1,113 +1,95 @@
-/* Container for the whole page */
+/* Description Section */
+.descriptionSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.descriptionSection h2 {
+  font-size: 36px;
+  color: #333333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.tagline span {
+  font-size: 24px;
+  color: #007bff;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature {
+  background-color: #f9f9ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+}
+
+.feature h3 {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.5;
+}
+
+/* Modify SignUpContainer for new layout */
 .signUpContainer {
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-    background-color: #f9f9ff;
-  }
-  
-  /* Left Column: Image Section */
-  .imageSection {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 20px;
-  }
-  
-  .imageSection img {
-    max-width: 100%;
-    max-height: 100vh;
-    object-fit: contain;
-  }
-  
-  /* Right Column: Form Section */
-  .formSection {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #f3f4f6;
-  }
-  
-  /* Signup Form */
-  .signUpForm {
-    background-color: #ffffff;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9ff;
+  flex-direction: row; /* Desktop view: Image description left, Form right */
+  padding: 20px;
+}
+
+/* Mobile Layout Adjustments */
+@media (max-width: 768px) {
+  .signUpContainer {
     flex-direction: column;
-    gap: 15px;
   }
-  
-  .signUpForm h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333333;
+
+  .descriptionSection {
+    padding: 20px;
   }
-  
-  /* Input Fields */
-  .signUpForm input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #dcdcdc;
-    border-radius: 5px;
-    font-size: 14px;
-    box-sizing: border-box;
+}
+
+/* Keyframe for animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  .signUpForm input:focus {
-    border-color: #007bff;
-    outline: none;
-    background-color: #f9f9ff;
+  100% {
+    opacity: 1;
   }
-  
-  /* Signup Button */
-  .signUpButton button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .signUpButton button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Sign-In Section */
-  .SignInDiv {
-    text-align: center;
-    margin-top: 15px;
-  }
-  
-  .SignInDiv label {
-    margin-right: 10px;
-    font-size: 14px;
-    color: #555555;
-  }
-  
-  .SignInDiv button {
-    padding: 10px 20px;
-    background-color: #f4f4f4;
-    color: #007bff;
-    border: 1px solid #007bff;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .SignInDiv button:hover {
-    background-color: #e0e0e0;
-    color: #0056b3;
-  }
-  
+}
